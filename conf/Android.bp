@@ -1,3 +1,6 @@
+soong_namespace {
+}
+
 // Bluetooth bt_stack_qti.conf config file
 // ========================================================
 prebuilt_etc {

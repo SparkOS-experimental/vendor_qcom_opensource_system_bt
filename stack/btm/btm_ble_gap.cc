@@ -2730,6 +2730,10 @@ void btm_ble_process_ext_adv_pkt(uint8_t data_len, uint8_t* data) {
     // in ScanFilter#matches
     RawAddress original_bda = bda;
 
+    // Store this to pass up the callback chain to GattService#onScanResult for the check
+    // in ScanFilter#matches
+    RawAddress original_bda = bda;
+
     if (addr_type != BLE_ADDR_ANONYMOUS) {
       btm_ble_process_adv_addr(bda, &addr_type);
     }
